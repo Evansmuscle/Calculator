@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+html {
+  display: inherit;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("../img/michael-dziedzic-gEN5Btvf2Eg-unsplash.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  &__calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 3rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: fit-content;
+    height: 60rem;
+    background-image: linear-gradient(
+      to left top,
+      rgba(75, 7, 15, 0.8),
+      rgba(184, 71, 78, 0.8)
+    );
+    padding: 1rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.9);
+  }
+
+  &__btn {
+    margin-top: 1rem;
+  }
+}
+
+.number-input {
+  width: 99%;
+  height: 20%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 400%;
+  line-height: 5rem;
+  background-color: rgb(24, 24, 24);
+  color: white;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  outline: none;
+}
+
+.btn {
+  position: relative;
+  font-weight: 500;
+  padding: 2.5rem;
+  margin: 0.3rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(
+    to left top,
+    rgba(68, 68, 68, 0.8),
+    rgba(146, 2, 12, 0.8)
+  );
+  width: 8rem;
+  height: 6rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  outline: none;
+  border: 0.2rem solid rgb(34, 34, 34);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  text-align: center;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgb(0, 0, 0);
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    background-color: rgba(146, 2, 12, 0.8);
+    transform: scale(1.05) translateY(-0.3rem);
+    -webkit-transform: scale(1.05) translateY(-0.3rem);
+    -moz-transform: scale(1.05) translateY(-0.3rem);
+    -ms-transform: scale(1.05) translateY(-0.3rem);
+    -o-transform: scale(1.05) translateY(-0.3rem);
+    box-shadow: 0.2rem 0.2rem 1rem rgb(0, 0, 0);
+  }
+
+  &:active {
+    transform: scale(1.02) translateY(-0.1rem);
+    -webkit-transform: scale(1.02) translateY(-0.1rem);
+    -moz-transform: scale(1.02) translateY(-0.1rem);
+    -ms-transform: scale(1.02) translateY(-0.1rem);
+    -o-transform: scale(1.02) translateY(-0.1rem);
+    box-shadow: 0.2rem 0.2rem 0.6rem rgb(0, 0, 0);
+  }
+}
+
+.calc__row {
+  display: block;
+}
+
+.header {
+  &__calculator {
+    color: rgba(170, 170, 170, 0.781);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-size: 7rem;
+    font-weight: 200;
+    animation: moveInLeft 2s;
+    -webkit-animation: moveInLeft 2s;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+
+    &:hover {
+      letter-spacing: 1rem;
+      font-size: 8rem;
+    }
+
+    &-text {
+      text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
